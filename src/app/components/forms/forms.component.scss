@@ -55,10 +55,11 @@
 
 .form-group .btn-wrapper {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    justify-content: center;;
 }
 
 .form-group .btn-wrapper .btn{
@@ -86,11 +87,31 @@
 .form-group .checkbox-wrapper{
     color: var(--light-grey);
     margin: 32px 0 ;
-    position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-group .checkbox-wrapper input[type="checkbox"] {
+    margin-right: 4px;
 }
 
 .form-group .checkbox-wrapper span{
-    position: absolute;
     right: 0;
+}
+
+
+@media (min-width: 768px) {
+    .form-group .btn-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-group .checkbox-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
